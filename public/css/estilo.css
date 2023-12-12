@@ -1,0 +1,360 @@
+body {
+    font-family: 'Lato', sans-serif;    
+    padding-top: 54px;
+}
+
+.nav-item {
+	font-size:20px;
+	text-transform: uppercase;
+	margin: 0px 20px;
+}
+
+.nav-user {
+    display: block;
+    padding: .5rem 1rem;
+	color: #fff;
+}
+
+button {
+	cursor: pointer;
+}
+
+section {
+	padding: 100px 0;
+	background-color: #ededed;
+    min-height: 500px;
+}
+
+#oferta {
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    width: 250px;
+    z-index: 200;
+    background-color: red;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 10px solid white;
+}
+
+#principal {
+    background: url(../images/busbg.jpg) no-repeat top left!important;
+    background-size: 100% 100%;
+	height:767px;
+    padding:0px;
+}
+
+.module.bus_search {
+    width: 338px;
+    background: white;
+    color: black;
+    text-align: left;
+    position: absolute;
+    top: 132px;
+    right: 105px;
+    padding: 30px 20px;
+    left: auto;
+}
+
+#busFrm .row-fluid {
+    margin-bottom: 10px;
+}
+#busFrm p.label_search {
+    font-size: 18px;
+    color: #333333;
+	font-weight:bold;
+}
+form#busFrm .input-append input, form#busFrm .input-append select {
+    width: 88%;
+    height: 43px;
+    font-size: 16px;
+}
+form#busFrm label {
+    font-size: 18px;
+}
+.jbsearch_personal select {
+    width: 100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.jbsearch_submit button, .jbsearch_personal select {
+    height: 43px;
+}
+
+.modal-content{padding: 20px;}
+.login .form-group input{padding: 10px; height: 50px;}
+.register input{padding: 10px; height: 50px;}
+.contact input{padding: 10px; height: 50px;}
+.register input,.register textarea,.contact input,.contact textarea{ margin-bottom: 15px;}
+.login button,.register button,.contact button{width: 100%;border-radius: 5px;}
+
+.lista-rutas {
+    background-color: #fff;
+    margin:20px;
+    padding:20px;
+}
+
+.lista-rutas table thead {
+    background-color: #ededed;
+}
+
+.detalles-ruta, .asientos {
+    background-color: #fff;
+}
+
+/* ASIENTOS */
+.toggle-btn-grp { 
+    margin:3px 0; 
+}
+.toggle-btn { 
+    text-align:center;
+    margin:5px 2px;
+    padding:0.4em 3em; 
+    color:#000; 
+    background-color:#FFF; 
+    border-radius:10px; 
+    display:inline-block; 
+    border:solid 1px #CCC; 
+    cursor:pointer;
+}
+
+.toggle-btn-grp.joint-toggle .toggle-btn { 
+    margin:5px 0; 
+    padding:0.4em 2em; 
+    border-radius:0;
+    border-right-color:white;
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:first-child { 
+    margin-left:2px; 
+    border-radius: 10px 0px 0px 10px; 
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:last-child { 
+    margin-right:2px;  
+    border-radius: 0px 10px 10px 0px;
+    border-right:solid 1px #CCC;
+}
+
+
+.toggle-btn:hover { 
+    border:solid 1px #a0d5dc !important; 
+    background:#f1fdfe;
+}
+
+
+.toggle-btn.success { 
+    background:lightgreen;
+    border:solid 1px green !important; 
+}
+
+
+.visuallyhidden { 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+    clip: auto; 
+    height: auto; 
+    margin: 0; 
+    overflow: visible; 
+    position: static; 
+    width: auto; 
+}
+
+
+/* CSS only version */
+.toggle-btn-grp.cssonly * {
+    width:40px;
+    height:30px;
+    line-height:30px;
+}
+.toggle-btn-grp.cssonly div {
+    display:inline-block;
+    position:relative;
+    margin:5px 2px;
+}
+
+.toggle-btn-grp.cssonly div label {
+    position:absolute;
+    z-index:0;
+    padding:0;
+    text-align:center;
+}
+
+.toggle-btn-grp.cssonly div input {
+    position:absolute;
+    z-index:1;
+    cursor:pointer;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div:hover label {
+    border:solid 1px #a0d5dc !important; 
+    background:#f1fdfe;
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background:lightgreen;
+    border:solid 1px green !important; 
+}
+
+.toggle-btn-grp.cssonly div input:disabled + label {
+  content:'Sold';
+    background:red;
+    border:solid 1px red !important; 
+  
+}
+.toggle-btn-grp.cssonly.shaon div input:disabled + label {
+  
+    background:yellow;
+    border:solid 1px red !important; 
+  
+}
+
+/* ASIENTOS */
+.conductor {
+    vertical-align: bottom;
+    display: table-cell;
+    height: 186px;
+}
+
+.fila-asientos {
+    width: 100% !important;
+    float: left !important;
+    min-height: 1px !important;
+    padding: 0px !important;
+    position: relative !important;
+}
+
+.pasillo {
+    height: 30px;
+    width: 100%;
+    float: left !important;
+    position: relative !important;
+}
+
+.asiento_ND {
+    background-image: url(../images/asiento_nodisp.png);
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 34px;
+    margin-top: 10px;
+    height: 27px;
+}
+
+.asiento {
+    background-image: url(../images/asiento_disp.png);
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 34px;
+    margin-top: 10px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.asientoSel {
+    background-image: url(../images/asiento_sel.png);
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 34px;
+    margin-top: 10px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.col_rojo {
+    color: #e24648;
+    font-size: 13px;
+}
+
+.titulo{
+    width:100%;
+    font-weight: bold;
+    font-size:18px;
+    text-align: center;
+    margin-bottom:5px;
+    border-bottom:1px solid;
+    padding:10px;
+}
+
+.tour {
+    color: #565656;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
+
+}
+.tour span {
+    font-size: 10px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+.route_inner_txt {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    float: left;
+    margin-bottom: 14px;
+}
+
+.route_from {
+    width: 20%;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+}
+.route_arrow {
+    width: 5%;
+    float: left;
+    margin-top: 7px;
+}
+.route_to {
+    width: 20%;
+    float: left;
+}
+.route_date {
+    width: 20%;
+    float: left;
+}
+.route_name {
+    width: 15%;
+    float: left;
+    margin-top: 10px;
+}
+
+.trip_details_inner {
+    padding: 3px;
+    margin: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+	.navbar-expand-lg .navbar-nav .nav-user {
+		padding-right: .5rem;
+		padding-left: .5rem;
+	}
+}
+
+.h1 small {
+    font-size: 24px;
+}
