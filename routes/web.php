@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,8 @@ Route::get('/empresa', function(){
 Route::get('/servicios', function(){
     return view('services');
 })->name('servicios');
+
+Route::post('/buscar', [SearchController::class, 'index'])->name('buscar');
 
 // Route::get('/', function () {
 //     return view('welcome');

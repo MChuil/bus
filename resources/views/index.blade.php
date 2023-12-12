@@ -10,10 +10,11 @@
             <div class="row">
                 <div class="col-lg-12 mx-auto">
                     <div class="module bus_search">
-                        <form name="busSearchForm" method="post" action="buscar_ruta.php" id="busFrm">
+                        <form name="busSearchForm" method="post" action="{{ route('buscar') }}" id="busFrm">
+                            @csrf
                             <div class="row-fluid input-append">
                                 <p class="label_search" style="min-width: 50px;">Ruta</p>
-                                <select name="ruta" class="input-medium form-control">
+                                <select name="route" class="input-medium form-control">
                                     <option value="" selected="selected">Seleccionar ruta</option>
                                     @foreach ($routes as $route)
                                         <option value="{{ $route->id }}"> {{ $route->name }}</option>
@@ -23,7 +24,7 @@
                             <div class="row-fluid">
                                 <div class="span6 input-append date start_date">
                                     <p class="label_search">Fecha</p>
-                                    <input type="text" class="input-small datepicker" name="fecha"
+                                    <input type="text" class="input-small datepicker" name="date"
                                         data-format="dd/mm/yyyy" value="@php echo date('d/m/Y'); @endphp">
                                 </div>
                             </div>
