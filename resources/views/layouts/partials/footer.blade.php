@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="images/logofooter.png" alt="">
+                <img src="{{asset('images/logofooter.png') }}" alt="">
             </div>
             <div class="col-md-9">
                 <p class="m-0 text-right text-white">Copyright &copy; Javier Vegas 2017</p>

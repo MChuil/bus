@@ -15,8 +15,9 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
-    public function create(): View
+    public function create($search= false): View
     {
+        ($search)? session(['search' => true]): null;
         return view('auth.login');
     }
 

@@ -27,8 +27,10 @@
         @include('layouts.partials.navbar')
         
         @yield('content')
+        
         <!-- footer -->
         @include('layouts.partials.footer')
+
         <!-- script -->
         @yield('scripts')
     </body>

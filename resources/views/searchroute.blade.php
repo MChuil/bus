@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row">
-                {{-- {{ $data }} --}}
+                {{-- {{ var_dump($data) }} --}}
                 <div class="col-md-12 lista-rutas">
                     <table class="table table-hover">
                         <thead>
@@ -39,8 +39,11 @@
                                     <td>{{ $row->price }}</td>
                                     <td>{{ $row->available }}</td>
                                     <td>
-                                        <a class="btn btn-success" href="{{ route('login') }}"
-                                            >Acceso usuarios</a>
+                                        @auth
+                                        <a href="{{ route('reservar', [$row->id, $dateToTime, $route_id])}}" class="btn btn-success">Reservar billete</a>
+                                        @else    
+                                        <a class="btn btn-success" href="{{ route('login', true) }}">Acceso usuarios</a>
+                                        @endauth
                                     </td>
                                 </tr>
                             @endforeach
