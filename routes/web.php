@@ -4,6 +4,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservarController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Route::get('test', [TestController::class, 'index'])->name('test');
+
+
+
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/contacto', function(){
     return view('contact');
