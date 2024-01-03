@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BuysController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservarController;
@@ -38,6 +39,10 @@ Route::get('/buscar', [SearchController::class, 'loadSeats'])->name('asientos');
 Route::post('/buscar', [SearchController::class, 'index'])->name('buscar');
 
 Route::get('reservar/{id}/{date}/{route_id}', [ReservarController::class, 'index'])->name('reservar');
+Route::post('reservar/pasajeros', [ReservarController::class, 'reserve'])->name('reservar.pasajeros');
+Route::post('reservar/finalizar', [ReservarController::class, 'finish'])->name('reservar.finalizar');
+
+Route::get('compras', [BuysController::class, 'index'])->name('compras.index');
 // Route::get('/', function () {
 //     return view('welcome');
 // });

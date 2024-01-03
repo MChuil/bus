@@ -9,7 +9,8 @@
             <div class="row">
                 <div class="col-12">
                     <h2>Reservar billete</h2>
-                    <form id="reservar_form" method="post" action="reservar_pasajeros.php">
+                    <form id="reservar_form" method="post" action="{{ route('reservar.pasajeros') }}">
+                        @csrf
                         <div class="row" id="bus">
                             <div class="col-md-3 detalles-ruta pt-3">
                                 <p>
@@ -142,6 +143,15 @@
                 $("#bus .total_tarifa").text(num);
             }
         }
+
+        $("#reservar-button").click(function () {
+            if ($("#asientos_sel").val() == '') {
+                alert("Debe seleccionar asientos")
+            } else {
+                var form_reservar = $("#reservar_form");
+                form_reservar.submit();
+            }
+        });
     </script>
     
 @endsection
