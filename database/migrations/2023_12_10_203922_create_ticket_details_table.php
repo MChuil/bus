@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('name',150);
             $table->string('lastname', 255);
             $table->string('dni', 15); //255
-            $table->string('seat', 5);
-            $table->string('locator', 50);
-            $table->unsignedBigInteger('buys_id'); //no existe
+            $table->string('seat', 10);
+            $table->string('locator');
+            $table->string('buys_id'); //no existe
             $table->integer('state');
 
             $table->foreign('route_id')->references('id')->on('bus_routes');
